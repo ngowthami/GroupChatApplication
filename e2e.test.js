@@ -6,7 +6,7 @@ describe('All test cases', () => {
     test('User can log in successfully', async () => {
         try {
             const response = await axios.post('http://localhost:8090/api/user/login', {
-                username: 'gangasiva',
+                username: 'gowthami',
                 password: 'Kore12346677',
             });
             expect(response.status).toBe(200);
@@ -21,7 +21,7 @@ describe('All test cases', () => {
     test('Login Failure', async () => {
         try {
             const response = await axios.post('http://localhost:8090/api/user/login', {
-                username: 'gangasiva',
+                username: 'gowthami',
                 password: 'Kore1234667',
             });
             expect(response.status).toBe(401);
@@ -102,7 +102,7 @@ describe('All test cases', () => {
     test('edit user failure', async () => {
         try {
             const response = await axios.put('http://localhost:8090/api/user/u-1d407f68-18cb-43d5-b70f-a708d819cc27', {
-                username: 'gangasiva',
+                username: 'gowthami',
                 password: 'Kore1234667',
                 isAdmin: true
             },
@@ -241,7 +241,7 @@ describe('All test cases', () => {
             const response = await axios.post(
                 'http://localhost:8090/api/user/logout',
                 {
-                    username: 'gangasiva',
+                    username: 'gowthami',
                     password: 'Kore12346677',
                 },
                 {
@@ -261,7 +261,7 @@ describe('All test cases', () => {
     test('Logout Failure', async () => {
         try {
             const response = await axios.post('http://localhost:8090/api/user/logout', {
-                username: 'gangasiva',
+                username: 'gowthami',
                 password: 'Kore1234667',
             });
             expect(response.status).toBe(401);
